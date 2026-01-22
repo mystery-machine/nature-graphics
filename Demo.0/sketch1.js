@@ -29,9 +29,9 @@ function draw() {
     for (let i = 0 ; i < posArr.length; i++) {
         for (let j = 0; j < posArr[i].length; j++){
             strokeWeight(3)
-            point(i*xcols, j*ycols)
+            point(i*xcols + xcols/2, j*ycols + ycols/2)
             strokeWeight(1)
-            line(i*xcols, j*ycols, i*xcols + 0.5*xcols*posArr[i][j].x, j*ycols + 0.5*ycols*posArr[i][j].y)
+            line(i*xcols+ xcols/2, j*ycols+ycols/2, xcols/2 +i*xcols + 0.5*xcols*posArr[i][j].x, ycols/2 + j*ycols + 0.5*ycols*posArr[i][j].y)
         }
     }
 }
